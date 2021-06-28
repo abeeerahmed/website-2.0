@@ -1,60 +1,111 @@
-body{ margin: 0;
+
+*{
+  margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
- }
-header{
-  position:fixed;
-  background: #252A44;
-  padding: 20px;
-  width:100%;
-  height:30px;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif; }
+ 
+   body{ 
+  height: 100vh;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
 }
+
+header{
+  position: fixed;
+  background: #22242A;
+  padding: 20px;
+  width: 100%;
+  height: 70px;
+}
+
 .left_area h3{
-  color:#fff;
+  color: #fff;
   margin: 0;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 900;
+}
 
-}
 .left_area span{
-  color:#1DC4E7;
-  
+  color: #19B3D3;
 }
-.search_btn{
-  padding:5px;
-  color:white;
-  background:#35749C;
-  text-decoration :none;
-  float:right;
-  margin-top:-30px;
-  margin-right:120px; 
+
+.Signin_btn{
+  padding: 7px;
+  background: #19B3D3;
+  text-decoration: none;
+  float: right;
+  margin-top: -20px;
+  margin-right:45px;
   border-radius: 10px;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
-  transition:0.5s;
+  color: #fff;
+  transition: 0.5s;
   transition-property: background;
 }
-.serach_btn:hover{
-  background:#0D9DBB;
+
+.signin_btn:hover{
+  background: #0B87A6;
 }
-.Signin_btn{
-  padding:5px;
-  color:white;
-  background:#35749C;
-  text-decoration :none;
-  float:right;
-  margin-top:-30px;
-  margin-right:50px; 
-  border-radius: 10px;
-  font-size: 12px;
-  font-weight: 600;
-  transition:0.5s;
-  transition-property:background;
+.box{
+  max-width: 400px;
+  width: 100%;
+position: absolute;
+right:140px;
+top:10px;
 }
-.Signin_btn:hover{
-  background:#0D9DBB;
+.box .search-box{
+  position: relative;
+  height: 50px;
+  max-width: 50px;
+  margin: auto;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  transition: all 0.3s ease;
 }
+#check-one:checked ~ .search-box{
+  max-width: 380px;
+}
+.search-box input{
+ position: absolute;
+ height: 100%;
+ width: 100%;
+ border-radius: 35px;
+ background: #fff;
+ outline: none;
+ border: none;
+ padding-left: 20px;
+ font-size: 18px;
+ border:5px solid #22242A;
+}
+.search-box .icon{
+  position: absolute;
+  right: -2px;
+  top: 0;
+  width: 50px;
+  background: #22242A;
+  height: 100%;
+  text-align: center;
+  line-height: 50px;
+  color:white ;
+  font-size: 20px;
+  border-radius: 35px;
+}
+#check-one:checked ~ .search-box .icon{
+  background: white;
+  color: black;
+  width: 60px;
+  border-radius: 0 25px 25px 0;
+  border:5px solid #22242A;
+}
+#check-one{
+  display: none;
+}
+
 .sidebar {
   background: #2f323a;
   margin-top: 70px;
@@ -65,7 +116,21 @@ header{
   height: 100%;
   transition: 0.5s;
   transition-property: left;
- }
+}
+
+.sidebar .profile_image{
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.sidebar h4{
+  color: #ccc;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
 .sidebar a{
   color: #fff;
   display: block;
@@ -75,7 +140,7 @@ header{
   padding-left: 40px;
   box-sizing: border-box;
   transition: 0.5s;
-  transition-property:background;
+  transition-property: background;
 }
 
 .sidebar a:hover{
@@ -115,14 +180,16 @@ label #sidebar_btn:hover{
   margin-left: 170px;
   width: 80px;
 }
+
 .content{
   margin-left: 250px;
-  background: url(1.png) no-repeat ;
-    background-position: center;
+  background: url(background.png) no-repeat;
+  background-position: center;
   background-size: cover;
   height: 100vh;
   transition: 0.5s;
 }
+
 #check:checked ~ .content{
   margin-left: 60px;
 }
